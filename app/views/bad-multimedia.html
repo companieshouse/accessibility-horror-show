@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Important information about Cardiff
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Important information about Cardiff
+      </h1>
+
+      <p>Cardiff is the capital of Wales, and its largest city. The eleventh-largest city in the United Kingdom, it is Wales's chief commercial centre, the base for most national cultural institutions and Welsh media, and the seat of the National Assembly
+        for Wales.</p>
+
+      {{ govukWarningText({
+        text: "Check out our video or podcast for some important information about Cardiff",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <h2 class="govuk-heading-m">Video</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/v3Cc_0zCix8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-9">Podcast</h2>
+      <p>
+        <a href="https://soundcloud.com/user-859571861/corporate-social-responsibility">Important information about Cardiff (MP3 - 1.6MB)</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

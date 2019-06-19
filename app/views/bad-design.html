@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Important information
+{% endblock %}
+
+{% block content %}
+
+  <style type="text/css">
+    body {
+      animation: colorchange 50s;
+      /* animation-name followed by duration in seconds*/
+      /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange 50s;
+      /* Chrome and Safari */
+    }
+
+    @keyframes colorchange {
+      0% {
+        background: red;
+      }
+      25% {
+        background: yellow;
+      }
+      50% {
+        background: blue;
+      }
+      75% {
+        background: green;
+      }
+      100% {
+        background: red;
+      }
+    }
+    /* Safari and Chrome - necessary duplicate */
+    @-webkit-keyframes colorchange {
+      0% {
+        background: red;
+      }
+      25% {
+        background: yellow;
+      }
+      50% {
+        background: blue;
+      }
+      75% {
+        background: green;
+      }
+      100% {
+        background: red;
+      }
+    }
+    .govuk-header,
+    .govuk-header__container {
+      border-bottom: none;
+    }
+  </style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Important information
+      </h1>
+
+      <img src="/public/images/animated-important.gif"/>
+
+      <p>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+      <p style="font-size:12px;">This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+
+      {{ govukDetails({
+        summaryText: "Help with nationality",
+        text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+      }) }}
+
+      <p style="font-size:12px; color:red;">This is a paragraph of text. It explains in more detail what has happened and wraps across several lines. This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.
+        This is a paragraph of text. It explains in more detail what has happened and wraps across several lines. This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+
+      <p class="tiny-text">This paragraph has a link to
+        <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+
+      {{ govukTable({
+        caption: "Dates and amounts",
+        firstCellIsHeader: true,
+        head: [
+          {
+            text: "Date"
+          },
+          {
+            text: "Amount"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "First 6 weeks"
+            },
+            {
+              text: "£109.80 per week"
+            }
+          ],
+          [
+            {
+              text: "Next 33 weeks"
+            },
+            {
+              text: "£109.80 per week"
+            }
+          ],
+          [
+            {
+              text: "Total estimated pay"
+            },
+            {
+              text: "£4,282.20"
+            }
+          ]
+        ]
+      }) }}
+      <img src="/public/images/animated-new.gif"/>
+      <p style="color:red;">This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+      <p>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
