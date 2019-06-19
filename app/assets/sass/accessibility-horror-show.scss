@@ -1,6 +1,8 @@
+@import "lib/extensions/extensions";
+
 .no-focus:active,
 .no-focus:focus {
   background: none;
   outline: none;
-  color: $govuk-colour("govuk-link-colour");
+  color: $govuk-link-colour;
 }
