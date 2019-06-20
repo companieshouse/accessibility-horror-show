@@ -77,14 +77,14 @@
 
       {{ govukDetails({
         summaryText: "Help with nationality",
-        text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+        html: '<span class="red-font">We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.</span>'
       }) }}
 
       <p class="tiny-font red-font">This is a paragraph of text. It explains in more detail what has happened and wraps across several lines. This is a paragraph of text. It explains in more detail what has happened and wraps across several lines. This is
         a paragraph of text. It explains in more detail what has happened and wraps across several lines. This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
 
       <p class="tiny-text">This paragraph has a link to
-        <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+        <a href="#" class="tiny-font">find out more about this subject</a>.</p>
 
       {{ govukTable({
         caption: "Dates and amounts",
