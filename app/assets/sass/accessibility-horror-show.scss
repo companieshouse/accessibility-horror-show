@@ -16,10 +16,9 @@
 }
 
 .colourless-link {
-  color: grey;
-
   &:focus,
   &:hover,
+  &:link,
   &:visited {
     color: grey;
   }
