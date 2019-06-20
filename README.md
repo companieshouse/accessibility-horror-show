@@ -1,4 +1,4 @@
-# accessibility-horror-show
+# Showcase of 'bad' design/development
 Showcase of 'bad' design: to be used to raise awareness of the importance of inclusive design.
 
 [Website can be seen on Heroku]( https://accessibility-horror-show.herokuapp.com/)
