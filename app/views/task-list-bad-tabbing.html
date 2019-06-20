@@ -7,6 +7,9 @@
   Check your submission
 {% endblock %}
 
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
 {% block content %}
   <style type="text/css">
     .govuk-skip-link {

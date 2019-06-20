@@ -14,3 +14,44 @@
 .red-font {
   color: $govuk-error-colour;
 }
+
+.colourless-link {
+  color: grey;
+
+  &:focus,
+  &:hover,
+  &:visited {
+    color: grey;
+  }
+}
+
+.govuk-button-light-grey {
+  background-color: govuk-colour("grey-1");
+  box-shadow: 0 2px 0 govuk-colour("black");
+
+  &:focus,
+  &:hover {
+    background-color: govuk-colour("grey-2");
+    box-shadow: 0 2px 0 govuk-colour("grey-1");
+  }
+}
+
+.govuk-button-medium-grey {
+  background-color: govuk-colour("grey-2");
+  box-shadow: 0 2px 0 govuk-colour("grey-1");
+  margin-left: 1em;
+
+  &:focus,
+  &:hover {
+    background-color: govuk-colour("grey-3");
+    box-shadow: 0 2px 0 govuk-colour("grey-2");
+  }
+}
+
+.list-grey {
+  color: govuk-colour("grey-1");
+}
+
+.light-grey {
+  color: govuk-colour("grey-2");
+}

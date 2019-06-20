@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Killer mushrooms
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <style type="text/css">
+    .govuk-header,
+    .govuk-header__container {
+      border-bottom-color: grey;
+    }
+  </style>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Killer mushrooms</h1>
+
+      {{ govukWarningText({
+        text: "The green mushrooms listed here are OK to eat. The red mushrooms will kill you.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <ul class="govuk-list govuk-list--bullet list-grey">
+        <li class="light-grey">Amanita</li>
+        <li>Chanterelle</li>
+        <li>Porcini</li>
+        <li class="light-grey">Tylopilus</li>
+        <li>Shitake</li>
+      </ul>
+
+      <p class="govuk-!-margin-top-9 govuk-!-font-size-14">
+        This particular idea is
+        <a href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/" class="colourless-link">
+          based on a GDS blog
+        </p>
+
+      </div>
+    </div>
+  {% endblock %}
