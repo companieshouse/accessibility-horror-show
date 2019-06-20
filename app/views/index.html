@@ -12,17 +12,48 @@
         Examples of inaccessible design
       </h1>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="task-list-bad-tabbing">Bad tabbing</a>
-        </li>
-        <li>
-          <a href="bad-multimedia">Bad multimedia content</a>
-        </li>
-        <li>
-          <a href="bad-design">Bad use of colour and font size</a>
-        </li>
-      </ul>
+      {{ govukTable({
+        caption: "Examples of inaccessible design",
+        captionClasses: "govuk-visually-hidden",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Amount",
+              classes: "govuk-visually-hidden"
+          },
+          {
+            text: "Amount",
+              classes: "govuk-visually-hidden"
+          }
+        ],
+        rows: [
+          [
+            {
+              html: '<a href="task-list-bad-tabbing" class="govuk-!-font-weight-regular">Tabbing</a>'
+            },
+            {
+              text: "May cause problems for keyboard only users: page contains an illogical tab order, plus keyboard focus is missing from some elements."
+            }
+          ],
+          [
+            {
+              html: '<a href="bad-multimedia" class="govuk-!-font-weight-regular">Multimedia</a>'
+            },
+            {
+              text: "May cause problems for users with sight and hearing impairments: page comntains video content (without captions) plus audio content (without transcript)"
+            }
+          ],
+          [
+            {
+              html: '<a href="bad-design" class="govuk-!-font-weight-regular">Colour/animations/font</a>'
+            },
+            {
+              text: "May cause problems for users with sight and cognitive impairments: page contains confusing/distracting design and very small text"
+            }
+          ]
+        ]
+      }) }}
+
     </div>
   </div>
 
