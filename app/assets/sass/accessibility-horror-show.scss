@@ -24,6 +24,19 @@
   }
 }
 
+.govuk-link-purple-focus:focus {
+  outline: 10px solid $govuk-link-visited-colour;
+  background: none;
+}
+
+.app-task-list__task-name,
+.govuk-link {
+  &:visited {
+    color: $govuk-link-colour;
+    /* Don't want to show visited link styling */
+  }
+}
+
 .govuk-button-light-grey {
   background-color: govuk-colour("grey-1");
   box-shadow: 0 2px 0 govuk-colour("black");
