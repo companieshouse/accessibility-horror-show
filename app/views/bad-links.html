@@ -12,12 +12,7 @@
 
 {% block content %}
 
-  <style type="text/css">
-    .govuk-header,
-    .govuk-header__container {
-      border-bottom-color: grey;
-    }
-  </style>
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
@@ -34,10 +29,9 @@
             Sarah Philips
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="javascript:void(0)" class="colourless-link">
+            <a href="javascript:void(0)" >
               Change
-              <span class="govuk-visually-hidden">
-                name</span>
+
             </a>
           </dd>
         </div>
@@ -49,10 +43,9 @@
             5 January 1978
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="javascript:void(0)" class="colourless-link">
+            <a href="javascript:void(0)" >
               Change
-              <span class="govuk-visually-hidden">
-                date of birth</span>
+
             </a>
           </dd>
         </div>
@@ -66,10 +59,9 @@
             <br>SE23 6FH
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="javascript:void(0)" class="colourless-link">
+            <a href="javascript:void(0)" >
               Change
-              <span class="govuk-visually-hidden">
-                contact information</span>
+
             </a>
           </dd>
         </div>
@@ -82,10 +74,9 @@
             <p>sarah.phillips@example.com</p>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="javascript:void(0)" class="colourless-link">
+            <a href="javascript:void(0)" >
               Change
-              <span class="govuk-visually-hidden">
-                contact details</span>
+
             </a>
           </dd>
         </div>
@@ -102,10 +93,8 @@
             502135326
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="javascript:void(0)" class="colourless-link">
+            <a href="javascript:void(0)" >
               Change
-              <span class="govuk-visually-hidden">
-                previous application number</span>
             </a>
           </dd>
         </div>
@@ -117,11 +106,9 @@
             For personal use
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="javascript:void(0)" class="colourless-link">
-              Change
-              <span class="govuk-visually-hidden">
-                licence type</span>
-            </a>
+            <a href="javascript:void(0)">
+              Change</a>
+
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -134,10 +121,9 @@
             <br>SE23 6FH
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="javascript:void(0)" class="colourless-link">
+            <a href="javascript:void(0)" >
               Change
-              <span class="govuk-visually-hidden">
-                home address</span>
+
             </a>
           </dd>
         </div>
@@ -149,10 +135,9 @@
             Valid for 6 months
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="javascript:void(0)" class="colourless-link">
+            <a href="javascript:void(0)" >
               Change
-              <span class="govuk-visually-hidden">
-                licence period</span>
+
             </a>
           </dd>
         </div>
@@ -162,26 +147,18 @@
 
       <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-      {{ govukWarningText({
-        text: "Click the red button to delete (this cannot be undone)",
-        iconFallbackText: "Warning"
-      }) }}
-      {{ govukWarningText({
-        text: "Click the green button to submit",
-        iconFallbackText: "Warning"
-      }) }}
+      <p class="govuk-inset-text">You'll 'find some really important information in the 15MB PDF which you can download by clicking <a href="javascript:void(0)" >here</a></p>
+
 
       <form action="/confirmation" method="post" novalidate="novalidate">
 
         <input type="hidden" name="answers-checked" value="true">
 
-        <button type="submit" class="govuk-button govuk-button-light-grey">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <button type="submit" class="govuk-button ">
+        Submit
         </button>
 
-        <button type="submit" class="govuk-button govuk-button-medium-grey">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        </button>
+
 
       </form>
 
